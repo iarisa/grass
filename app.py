@@ -4,7 +4,8 @@ app=Flask(__name__)
 
 @app.route('/')
 def root(): 
-    return render_template('index.html')
+    markers=[{'lat': 0, 'lon': 0, 'popup': 'This is the middle of the map.'}]
+    return render_template('index.html',markers=markers )
 
 if __name__ == '__main__': 
     app.run(debug=True)
